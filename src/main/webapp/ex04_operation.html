@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산자 : 산술, 논리, 비교, 증감, 대입, 삼항 연산</title>
+<script type="text/javascript">
+	var s1 = 7;
+	var s2 = 2;
+	
+	// 산술연산 : +,-,*,/,%
+	document.write("<h2>산술연산자</h2>");
+	document.write("<h3><ul>");
+	// 문자열 + 숫자, 숫자+문자열, 문자열+문자열 (이때 '+'는 덧셈이아니라 문자연결이다.)
+	document.write("<li>"+s1+ "+" + s2 + "=" + (s1+s2) + "</li>");
+	document.write("<li>"+s1+ "-" + s2 + "=" + (s1-s2) + "</li>");
+	document.write("<li>"+s1+ "*" + s2 + "=" + (s1*s2) + "</li>");
+	document.write("<li>"+s1+ "/" + s2 + "=" + (s1/s2) + "</li>");
+	document.write("<li>"+s1+ "%" + s2 + "=" + (s1%s2) + "</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	// 비교연산자 : (>=, >, <=, <, ==, !=) : 결과 boolean, 주로 조건식에 사용
+	document.write("<h2>비교연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>"+s1+ ">" + s2 + "=" + (s1>s2) + "</li>");
+	document.write("<li>"+s1+ ">=" + s2 + "=" + (s1>=s2) + "</li>");
+	document.write("<li>"+s1+ "<" + s2 + "=" + (s1<s2) + "</li>");
+	document.write("<li>"+s1+ "<=" + s2 + "=" + (s1<=s2) + "</li>");
+	document.write("<li>"+s1+ "==" + s2 + "=" + (s1==s2) + "</li>");
+	document.write("<li>"+s1+ "!=" + s2 + "=" + (s1!=s2) + "</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	document.write("<h2>비교연산자 주의사항</h2>");
+	s1 = "1000";
+	s2 = 1000;
+	document.write("<h3><ul>");
+	document.write("<li>"+s1+ "==" + s2 + "=" + (s1==s2) + "</li>");
+	document.write("<li>"+s1+ "!=" + s2 + "=" + (s1!=s2) + "</li>");
+	
+	// 데이터와 자료형까지 같은 것을 물어볼때는 일치연산자(===)
+	document.write("<li>"+s1+ "===" + s2 + "=" + (s1===s2) + "</li>");
+	
+	s1 = true;	// false
+	s2 = 1;		// 0
+	s3 = "1";	// "0"
+	
+	// true 와 숫자1을 같다로 처리
+	document.write("<li>"+s1+ "==" + s2 + "=" + (s1==s2) + "</li>");
+	
+	// true 와 문자1을 같다로 처리
+	document.write("<li>"+s1+ "==" + s3 + "=" + (s1==s3) + "</li>");
+	
+	// 데이터와 자료형까지 같은 것을 물어볼때는 일치연산자(===)
+	document.write("<li>"+s1+ "===" + s2 + "=" + (s1===s2) + "</li>");
+	document.write("<li>"+s1+ "===" + s3 + "=" + (s1===s3) + "</li>");
+	
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	s1 = true;
+	s2 = false;
+	document.write("<h2>논리연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li> AND(&&) 조건 : 거짓을 만나면 결과는 거짓이 된다. </li>");
+	document.write("<li>"+s1+ "&&" + s1 + "=" + (s1&&s1) + "</li>");
+	document.write("<li>"+s1+ "&&" + s2 + "=" + (s1&&s2) + "</li>");
+	document.write("<li>"+s2+ "&&" + s1 + "=" + (s2&&s1) + "</li>");
+	document.write("<li>"+s2+ "&&" + s2 + "=" + (s2&&s2) + "</li>");
+	document.write("<hr>");
+	
+	document.write("<li> OR(||) 조건 : 참을 만나면 결과는 참이 된다. </li>");
+	document.write("<li>"+s1+ "||" + s1 + "=" + (s1||s1) + "</li>");
+	document.write("<li>"+s1+ "||" + s2 + "=" + (s1||s2) + "</li>");
+	document.write("<li>"+s2+ "||" + s1 + "=" + (s2||s1) + "</li>");
+	document.write("<li>"+s2+ "||" + s2 + "=" + (s2||s2) + "</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	// 증감연산자 : ++변수, 변수++, --변수, 변수--
+	s1 = 10;
+	s2 = 10;
+	
+	document.write("<h2>증감연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>++s1 = " + (++s1) + "</li>");
+	document.write("<li>s2++ = " + (s2++) + "</li>");
+	document.write("<br>");
+	document.write("<li>s1 = " + (s1) + "</li>");
+	document.write("<li>s2 = " + (s2) + "</li>");
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	// 대입연산자 : +=, -=, /=, %=
+	s1 = 100;
+	document.write("<h2>증감연산자</h2>");
+	document.write("<h3><ul>");
+	document.write("<li>s1 += 3 의 결과 : " + (s1 += 3) + "</li>");
+	document.write("<li>s1 -= 3 의 결과 : " + (s1 -= 3) + "</li>");
+	document.write("<li>s1 *= 3 의 결과 : " + (s1 *= 3) + "</li>");
+	document.write("<li>s1 /= 3 의 결과 : " + (s1 /= 3) + "</li>");
+	document.write("<li>s1 %= 3 의 결과 : " + (s1 %= 3) + "</li>");
+	
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+	// 삼항연산자 : var 변수 = 조건식 ? 참일때 실행 : 거짓일때 실행;
+	//				자바와 다르게 자바스크립트는 자료형을 상관하지 않는다.
+	//				자유롭게 삼항연산자를 사용할 수 있다.
+	
+	document.write("<h2>대입연산자</h2>");
+	// s1 이 80 이상이면 합격, 아니면 불합격
+	s1 = 75;
+	document.write("<h3><ul>");
+	var result = (s1>=80)?"합격":"불합격";
+	document.write("<li>결과 : " + result + "</li>");
+	
+	// s1 이 홀수인지 짝수인지 팔별하자
+	s1 = 47;
+	var result = (s1%2==0)?"짝수":"홀수";
+	document.write("<li>결과 : " + result + "</li>");
+	
+	document.write("</ul></h3>");
+	document.write("<hr>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

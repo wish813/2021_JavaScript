@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM : HTML 요소 변경</title>
+</head>
+<body>
+<!-- 
+	html 요소 변경
+	element.innerHTML : 내용변경
+	element.attribute : 속성 변경
+	element.style.property : CSS 스타일 속성 변경
+ -->
+ 
+ 	<p align="center">Hello Wrold</p>
+ 	<p id="p1" align="center">Hello Javascript</p>
+ 	<p><span id="p2" style="color: tomato; background-color: skyblue;" >Hello DOM</spqn></p>
+ 	<hr>
+ 	<p id="res1">KOREA seoul</p>
+ 	<p id="res2">
+ 	<h2>KOREA seoul</h2>
+ 	</p>
+ 	<img id="img1" alt="" src="images/KakaoTalk_20210526_123639247.gif">
+ 	
+ 	<script type="text/javascript">
+ 		document.getElementById("res1").innerHTML = "KOREA seoul";
+ 		document.getElementById("res2").innerHTML = "<h2>KOREA seoul</h2>";
+ 		
+ 		document.getElementById("p1").align = "center";
+ 		document.getElementById("img1").src="images/KakaoTalk_20210526_123639344.gif"
+ 		
+ 			document.getElementById("p2").style.color = "tomato";
+ 			document.getElementById("p2").style.backgroundColor = "yellow";
+ 		
+ 	</script>
+ 	
+ 	
+</body>
+</html>

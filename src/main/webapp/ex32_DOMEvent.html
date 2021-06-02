@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOMEvent</title>
+<style type="text/css">
+	div{
+		width: 200px;
+		margin: auto;
+	}
+</style>
+<script type="text/javascript">
+function on() {
+	document.getElementById("img_1").src = "images/KakaoTalk_20210526_123639344.gif";
+}
+function off() {
+	document.getElementById("img_1").src = "images/KakaoTalk_20210526_123639247.gif";
+}
+function viewon() {
+	document.getElementById("img_2").src = "images/KakaoTalk_20210526_123639344.gif";
+}
+function viewoff() {
+	document.getElementById("img_2").src = "images/KakaoTalk_20210526_123639247.gif";
+}
+function viewon2() {
+	document.getElementById("img_3").style.visibility = "visible";
+}
+function viewoff2() {
+	document.getElementById("img_3").style.visibility = "hidden";
+}
+</script>
+</head>
+<body>
+	<div id="btn">
+		<p>
+			<button onclick="on()">켜기</button>
+			<button onclick="off()">끄기</button>
+		</p>
+		<img id="img_1" alt="" src="images/KakaoTalk_20210526_123639247.gif">
+	<h3>버튼을 눌러주세요</h3>
+	</div>
+	<div id="btn">
+		<img id="img_2" alt="" src="images/KakaoTalk_20210526_123639247.gif" onmouseover="viewon()" onmouseout="viewoff()">
+		<h3>마우스를 그림에 올리기</h3>
+	</div>
+	<div id="btn">
+		<img id="img_3" alt="" src="images/pic_trulli.jpg" style="width: 200px; visibility: hidden;">
+		<h3 onmouseover="viewon2()" onmouseout="viewoff2()">해당 글자에 마우스를 그림에 올리기</h3>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

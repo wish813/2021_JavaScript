@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object</title>
+<script type="text/javascript">
+	// 자바에서 객체는 상태값(멤버필드(변수, 상수))과 기능(멤버메소드)
+	// 자바스크립트에서 객체는 상태값(property=속성)과 기능(function)
+	
+	// 객체 만드는 방법
+	var person01 = new Object();
+	
+	// 상태값 입력
+	person01["name"] = "홍길동";
+	person01["age"] = 24;
+	person01["gender"] = true;
+	
+	// 기능 입력
+	person01["play"] = function() {
+		return"야구 게임을 하다";
+	}
+	person01["sound"] = function() {
+		document.write("<li>" + person01["name"] + person01["age"] + "</li>");
+	}
+	
+document.write("<h2> 객체 상태값 호출 </h2>");
+document.write("<h3>");
+document.write("<li>" + person01["name"] + "</li>");
+document.write("<li>" + person01.age + "</li>");
+document.write("<li>" + person01["gender"] + "</li>");
+document.write("<li>" + person01.play + "</li>");
+document.write("<li>" + person01.play() + "</li>");
+person01.sound();
+document.write("<h3>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
